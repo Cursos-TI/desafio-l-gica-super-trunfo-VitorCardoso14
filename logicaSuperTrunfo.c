@@ -174,7 +174,7 @@ switch (EscolhaAtributo){
    break;
    case 4:
    if (Numero_de_Pontos_Turisticos1 > Numero_de_Pontos_Turisticos2){
-      printf("Carta 1(%s) ganhou em Número de Pontos Turisticos!(%.d a %.d)", Nome_do_Pais1, Numero_de_Pontos_Turisticos1, Numero_de_Pontos_Turisticos2
+      printf("Carta 1(%s) ganhou em Número de Pontos Turisticos!(%.d a %.d)", Nome_do_Pais1, Numero_de_Pontos_Turisticos1, Numero_de_Pontos_Turisticos2);
       } else if (Numero_de_Pontos_Turisticos1 == Numero_de_Pontos_Turisticos2){
       printf("Empate!");
       }else {
