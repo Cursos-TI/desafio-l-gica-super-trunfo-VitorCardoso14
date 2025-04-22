@@ -72,7 +72,7 @@ int main() {
  Super_Poder = Super_Poder1 > Super_Poder2;
 
  printf("Carta 1\n");
- printf("Nome da Cidade: %s\n", Nome_do_Pais1);
+ printf("Nome do País: %s\n", Nome_do_Pais1);
  printf("População: %d\n", Populacao1);
  printf("Área: %.2f km²\n", Area1);
  printf("PIB: %.2f bilhões de reais\n", PIB1);
@@ -82,7 +82,7 @@ int main() {
  printf("Super Poder: %.1f\n\n", Super_Poder1);
 
  printf("Carta 2\n");
- printf("Nome da Cidade: %s\n", Nome_do_Pais2);
+ printf("Nome do País: %s\n", Nome_do_Pais2);
  printf("População: %d\n", Populacao2);
  printf("Área: %.2f km²\n", Area2);
  printf("PIB: %.2f bilhões de reais\n", PIB2);
@@ -150,51 +150,51 @@ scanf("%d", &EscolhaAtributo);
 switch (EscolhaAtributo){
    case 1:
    if (Populacao1 > Populacao2){
-   printf("Carta 1 ganhou!(%s)", Nome_do_Pais1);
+   printf("Carta 1(%s) ganhou em População!(%.d a %.d)", Nome_do_Pais1, Populacao1, Populacao2);
    } else if (Populacao1 == Populacao2){
    printf("Empate!");
    }else {
-  printf("Carta 2 ganhou!(%s)", Nome_do_Pais2); }
+  printf("Carta 2(%s) ganhou em População!(%.d a %.d)", Nome_do_Pais2, Populacao2, Populacao1); }
    break;
    case 2:
    if (Area1 > Area2){
-      printf("Carta 1 ganhou!(%s)", Nome_do_Pais1);
+      printf("Carta 1(%s) ganhou em Área!(%.2f a %.2f)", Nome_do_Pais1, Area1, Area2);
       } else if (Area1 == Area2){
       printf("Empate!");
       }else {
-     printf("Carta 2 ganhou!(%s)", Nome_do_Pais2); }
+     printf("Carta 2(%s) ganhou em Área!(%.2f a %.2f)", Nome_do_Pais2, Area2, Area1); }
    break;
    case 3:
    if (PIB1 > PIB2){
-      printf("Carta 1 ganhou!(%s)", Nome_do_Pais1);
+      printf("Carta 1(%s) ganhou em PIB!(%.2f a %.2f)", Nome_do_Pais1, PIB1, PIB2);
       } else if (PIB1 == PIB2){
       printf("Empate!");
       }else {
-     printf("Carta 2 ganhou!(%s)", Nome_do_Pais2); }
+     printf("Carta 2(%s) ganhou em PIB!(%.2f a %.2f)", Nome_do_Pais2, PIB2, PIB1); }
    break;
    case 4:
    if (Numero_de_Pontos_Turisticos1 > Numero_de_Pontos_Turisticos2){
-      printf("Carta 1 ganhou!(%s)", Nome_do_Pais1);
+      printf("Carta 1(%s) ganhou em Número de Pontos Turisticos!(%.d a %.d)", Nome_do_Pais1, Numero_de_Pontos_Turisticos1, Numero_de_Pontos_Turisticos2
       } else if (Numero_de_Pontos_Turisticos1 == Numero_de_Pontos_Turisticos2){
       printf("Empate!");
       }else {
-     printf("Carta 2 ganhou!(%s)", Nome_do_Pais2); }
+     printf("Carta 2(%s) ganhou em Número de Pontos Turisticos!(%.d a %.d)", Nome_do_Pais2, Numero_de_Pontos_Turisticos2, Numero_de_Pontos_Turisticos1); }
    break;
    case 5:
    if (Densidade_Populacional1 < Densidade_Populacional2){
-      printf("Carta 1 ganhou!(%s)", Nome_do_Pais1);
+      printf("Carta 1(%s) ganhou em Densidade Demográfica!(%.2f a %.2f)", Nome_do_Pais1, Densidade_Populacional1, Densidade_Populacional2);
       } else if (Densidade_Populacional1 == Densidade_Populacional2){
       printf("Empate!");
       }else {
-     printf("Carta 2 ganhou!(%s)", Nome_do_Pais2); }
+     printf("Carta 2(%s) ganhou em Densidade Demográfica!(%.2f a %.2f)", Nome_do_Pais2, Densidade_Populacional2, Densidade_Populacional1); }
    break;
    case 6:
    if (Super_Poder1 > Super_Poder2){
-      printf("Carta 1 ganhou!(%s)", Nome_do_Pais1);
+      printf("Carta 1(%s) ganhou no super poder!(%.1f a %.1f)", Nome_do_Pais1, Super_Poder1, Super_Poder2);
       } else if (Super_Poder1 == Super_Poder2){
       printf("Empate!");
       }else {
-     printf("Carta 2 ganhou!(%s)", Nome_do_Pais2); }
+     printf("Carta 2(%s) ganhou no super poder!(%.1f a %.1f)", Nome_do_Pais2, Super_Poder2, Super_Poder1); }
    break;
    default:
    printf("Opção invalida");
