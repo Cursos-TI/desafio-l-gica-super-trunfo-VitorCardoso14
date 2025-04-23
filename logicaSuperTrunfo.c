@@ -3,7 +3,7 @@
 
 int main() {
  //carta 1
- char Nome_do_Pais1[50], Nome_do_Pais2[50];
+ char Nome_do_Pais1[50], Nome_do_Pais2[50], PimeiroAtributo, SegundoAtributo, Resultado1, Resultado2;
  int Numero_de_Pontos_Turisticos1, Numero_de_Pontos_Turisticos2, Populacao1, Populacao2,
  Populacao, Area, PIB, Numero_de_Pontos_Turisticos, Densidade_Populacional, PIB_per_Capita, Super_Poder, EscolhaAtributo;
  float Area1, PIB1, Densidade_Populacional1, PIB_per_Capita1, Super_Poder1, Area2, PIB2, Densidade_Populacional2, PIB_per_Capita2, Super_Poder2;
@@ -138,6 +138,7 @@ printf("Carta 2 (%s) Ganhou no Super Poder!\n", Nome_do_Pais2);
 
 //Escolha de qual atributo vai batalhar
 
+/*
 printf("Escolha o atributo da carta 1 para duelar contra a carta 2:\n");
 printf("1.População.\n");
 printf("2.Área.\n");
@@ -199,6 +200,67 @@ switch (EscolhaAtributo){
    default:
    printf("Opção invalida");
 }
+*/
+
+printf("Escolha o primeiro atributo da carta 1 para duelar contra a carta 2:\n");
+printf("P.População.\n");
+printf("A.Área.\n");
+printf("PI.PIB\n");
+printf("N.Número de Pontos Turísticos.\n");
+printf("D.Densidade Demográfica.\n");
+printf("S.Super Poder.\n");
+scanf("%s", &PimeiroAtributo);
+
+switch (PimeiroAtributo){
+case 'P':
+case 'p':
+   printf ("Você escolheu População!");
+   Resultado1 = Populacao1 > Populacao2 ? 1 : 0 ;
+   break;
+case 'A':
+case 'a':
+   printf ("Você escolheu Área!");
+   Resultado1 = Area1 > Area2 ? 1 : 0 ;
+   break;
+default:
+   printf("invalido");
+   break;
+}
+
+printf("Escolha o segundo atributo da carta 1 para duelar contra a carta 2:\n");
+printf("P.População.\n");
+printf("A.Área.\n");
+printf("PI.PIB\n");
+printf("N.Número de Pontos Turísticos.\n");
+printf("D.Densidade Demográfica.\n");
+printf("S.Super Poder.\n");
+scanf("%s", &SegundoAtributo);
+
+if (PimeiroAtributo == SegundoAtributo)
+{
+   printf("Você escolheu o mesmo atributo");
+} else{
+switch (SegundoAtributo){
+case 'A':
+case 'a':
+   printf ("Você escolheu Área!\n");
+   Resultado2 = Area1 > Area2 ? 1 : 0 ;
+   break;
+   default:
+      printf("invalido");
+      break;
+   }
+}
+
+if (Resultado1 && Resultado2)
+{printf("Você ganhou!");
+} else if (Resultado1 != Resultado2)
+{printf("Empate!");   
+} else{
+   printf("Você perdeu!");
+}
+
+
 
 
     return 0;
