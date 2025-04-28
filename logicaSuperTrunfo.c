@@ -3,8 +3,8 @@
 
 int main() {
  //carta 1
- char Nome_do_Pais1[50], Nome_do_Pais2[50], PimeiroAtributo, SegundoAtributo, Resultado1, Resultado2;
- int Numero_de_Pontos_Turisticos1, Numero_de_Pontos_Turisticos2, Populacao1, Populacao2,
+ char Nome_do_Pais1[50], Nome_do_Pais2[50], PimeiroAtributo, SegundoAtributo;
+ int Numero_de_Pontos_Turisticos1, Numero_de_Pontos_Turisticos2, Populacao1, Populacao2, Resultado1, Resultado2,
  Populacao, Area, PIB, Numero_de_Pontos_Turisticos, Densidade_Populacional, PIB_per_Capita, Super_Poder, EscolhaAtributo;
  float Area1, PIB1, Densidade_Populacional1, PIB_per_Capita1, Super_Poder1, Area2, PIB2, Densidade_Populacional2, PIB_per_Capita2, Super_Poder2;
 
@@ -214,14 +214,34 @@ scanf("%s", &PimeiroAtributo);
 switch (PimeiroAtributo){
 case 'P':
 case 'p':
-   printf ("Você escolheu População!");
-   Resultado1 = Populacao1 > Populacao2 ? 1 : 0 ;
+   printf ("Você escolheu População!\n");
+   Resultado1 = Populacao1 > Populacao2 ? 1 : 0;
    break;
 case 'A':
 case 'a':
-   printf ("Você escolheu Área!");
-   Resultado1 = Area1 > Area2 ? 1 : 0 ;
+   printf ("Você escolheu Área!\n");
+   Resultado1 = Area1 > Area2 ? 1 : 0;
    break;
+case 'PI':
+case 'pi':
+   printf ("Você escolheu PIB!\n");
+   Resultado1 = PIB1 > PIB2 ? 1 : 0;
+   break;
+case 'N':
+case 'n':
+   printf ("Você escolheu Pontos Turísticos!\n");
+   Resultado1 = Numero_de_Pontos_Turisticos1 > Numero_de_Pontos_Turisticos2 ? 1 : 0;
+   break;
+case 'D':
+case 'd':
+   printf ("Você escolheu Densidade Demográfica!\n");
+   Resultado1 = Densidade_Populacional1 < Densidade_Populacional2 ? 1 : 0;
+   break;
+case 'S':
+case 's':
+   printf ("Você escolheu Super Poder!\n");
+   Resultado1 = Super_Poder1 > Super_Poder2 ? 1 : 0;
+    break;
 default:
    printf("invalido");
    break;
@@ -241,11 +261,36 @@ if (PimeiroAtributo == SegundoAtributo)
    printf("Você escolheu o mesmo atributo");
 } else{
 switch (SegundoAtributo){
+case 'P':
+case 'p':
+   printf ("Você escolheu População!\n");
+   Resultado2 = Populacao1 > Populacao2 ? 1 : 0;
+   break;
 case 'A':
 case 'a':
    printf ("Você escolheu Área!\n");
-   Resultado2 = Area1 > Area2 ? 1 : 0 ;
+   Resultado2 = Area1 > Area2 ? 1 : 0;
    break;
+   case 'PI':
+   case 'pi':
+      printf ("Você escolheu PIB!\n");
+      Resultado2 = PIB1 > PIB2 ? 1 : 0;
+      break;
+   case 'N':
+   case 'n':
+      printf ("Você escolheu Pontos Turísticos!\n");
+      Resultado2 = Numero_de_Pontos_Turisticos1 > Numero_de_Pontos_Turisticos2 ? 1 : 0;
+      break;
+   case 'D':
+   case 'd':
+      printf ("Você escolheu Densidade Demográfica!\n");
+      Resultado2 = Densidade_Populacional1 < Densidade_Populacional2 ? 1 : 0;
+      break;
+   case 'S':
+   case 's':
+      printf ("Você escolheu Super Poder!\n");
+      Resultado2 = Super_Poder1 > Super_Poder2 ? 1 : 0;
+       break;
    default:
       printf("invalido");
       break;
@@ -253,15 +298,12 @@ case 'a':
 }
 
 if (Resultado1 && Resultado2)
-{printf("Você ganhou!");
+{printf("Você ganhou!(carta 1)");
 } else if (Resultado1 != Resultado2)
 {printf("Empate!");   
 } else{
-   printf("Você perdeu!");
+   printf("Você perdeu!(carta 1)");
 }
-
-
-
 
     return 0;
 }
